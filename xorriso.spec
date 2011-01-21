@@ -1,5 +1,5 @@
 Name:		xorriso
-Version:	0.6.6
+Version:	1.0.0
 Release:	%mkrel 1
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 License:	GPLv3
