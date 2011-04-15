@@ -1,5 +1,5 @@
 Name:		xorriso
-Version:	1.0.0
+Version:	1.0.8
 Release:	%mkrel 1
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 License:	GPLv3
@@ -30,4 +30,6 @@ xorriso copies file objects from POSIX compliant filesystems into Rock Ridge enh
 %{_bindir}/xorriso
 %{_bindir}/xorrisofs
 %{_datadir}/info/xorriso.info.xz
+%{_datadir}/info/xorrisofs.info.xz
 %{_mandir}/man1/xorriso.1.xz
+%{_mandir}/man1/xorrisofs.1.xz
