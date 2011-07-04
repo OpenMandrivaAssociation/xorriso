@@ -1,5 +1,7 @@
+%define bugfix_version pl01
+
 Name:		xorriso
-Version:	1.1.0
+Version:	1.1.0.%{bugfix_version}
 Release:	%mkrel 1
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 License:	GPLv3
@@ -13,7 +15,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 xorriso copies file objects from POSIX compliant filesystems into Rock Ridge enhanced ISO 9660 filesystems and allows session-wise manipulation of such filesystems.
 
 %prep
-%setup -q
+%setup -q -n %{name}-1.1.0
 
 %build
 %configure2_5x
