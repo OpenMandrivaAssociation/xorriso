@@ -1,21 +1,24 @@
-%define bugfix_version pl01
-
-Name:		xorriso
-Version:	1.1.0.%{bugfix_version}
-Release:	%mkrel 1
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
+Name:		xorriso
+Version:	1.1.4
+Release:	%mkrel 1
 License:	GPLv3
+Group:		Archiving/Cd burning
+URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
 Source0:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz
 Source1:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz.sig
-URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
-Group:		File tools 
+BuildRequires:	zlib-devel
+BuildRequires:	libacl-devel
+BuildRequires:	libbzip2-devel
+BuildRequires:	libattr1-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-xorriso copies file objects from POSIX compliant filesystems into Rock Ridge enhanced ISO 9660 filesystems and allows session-wise manipulation of such filesystems.
+xorriso copies file objects from POSIX compliant filesystems into Rock Ridge 
+enhanced ISO 9660 filesystems and allows session-wise manipulation of such filesystems.
 
 %prep
-%setup -q -n %{name}-1.1.0
+%setup -q
 
 %build
 %configure2_5x
@@ -25,8 +28,8 @@ xorriso copies file objects from POSIX compliant filesystems into Rock Ridge enh
 %makeinstall_std
 
 %files
-%defattr(-,root,root) 
-%doc AUTHORS COPYING COPYRIGHT README texinfo.tex
+%defattr(-,root,root)
+%doc AUTHORS README texinfo.tex
 %{_bindir}/osirrox
 %{_bindir}/xorrecord
 %{_bindir}/xorriso
