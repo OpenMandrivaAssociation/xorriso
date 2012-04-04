@@ -14,7 +14,7 @@ URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
 Source0:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz
 Source1:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz.sig
 BuildRequires:	zlib-devel
-BuildRequires:	libacl-devel
+BuildRequires:	acl-devel
 BuildRequires:	bzip2-devel
 BuildRequires:	libattr1-devel
 
