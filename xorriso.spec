@@ -1,21 +1,27 @@
+%define rel 1
+
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 Name:		xorriso
-Version:	1.1.4
-Release:	%mkrel 1
-License:	GPLv3
+Version:	1.2.2
+%if %{mdvver} <= 201020
+Release:	%mkrel %{rel}
+%else
+Release:	%{rel}
+%endif
+License:	GPLv3+
 Group:		Archiving/Cd burning
 URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
 Source0:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz
 Source1:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz.sig
 BuildRequires:	zlib-devel
 BuildRequires:	libacl-devel
-BuildRequires:	libbzip2-devel
+BuildRequires:	bzip2-devel
 BuildRequires:	libattr1-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 xorriso copies file objects from POSIX compliant filesystems into Rock Ridge 
-enhanced ISO 9660 filesystems and allows session-wise manipulation of such filesystems.
+enhanced ISO 9660 filesystems and allows session-wise manipulation of such
+filesystems.
 
 %prep
 %setup -q
@@ -34,7 +40,5 @@ enhanced ISO 9660 filesystems and allows session-wise manipulation of such files
 %{_bindir}/xorrecord
 %{_bindir}/xorriso
 %{_bindir}/xorrisofs
-%{_datadir}/info/xorriso.info.xz
-%{_datadir}/info/xorrisofs.info.xz
-%{_mandir}/man1/xorriso.1.xz
-%{_mandir}/man1/xorrisofs.1.xz
+%{_datadir}/info/xorr*.info*
+%{_mandir}/man1/xorr*.1*
