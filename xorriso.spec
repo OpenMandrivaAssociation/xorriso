@@ -16,7 +16,7 @@ Source1:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz.sig
 BuildRequires:	zlib-devel
 BuildRequires:	acl-devel
 BuildRequires:	bzip2-devel
-BuildRequires:	libattr1-devel
+BuildRequires:	attr-devel
 
 %description
 xorriso copies file objects from POSIX compliant filesystems into Rock Ridge 
