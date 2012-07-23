@@ -1,13 +1,7 @@
-%define rel 1
-
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 Name:		xorriso
-Version:	1.2.2
-%if %{mdvver} <= 201020
-Release:	%mkrel %{rel}
-%else
-Release:	%{rel}
-%endif
+Version:	1.2.4
+Release:	1
 License:	GPLv3+
 Group:		Archiving/Cd burning
 URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
@@ -34,7 +28,6 @@ filesystems.
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc AUTHORS README texinfo.tex
 %{_bindir}/osirrox
 %{_bindir}/xorrecord
