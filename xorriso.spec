@@ -32,6 +32,7 @@ filesystems.
 %{_bindir}/xorrecord
 %{_bindir}/xorriso
 %{_bindir}/xorrisofs
+%{_bindir}/xorriso-tcltk
 %{_datadir}/info/xorr*.info*
 %{_mandir}/man1/xorr*.1*
 
