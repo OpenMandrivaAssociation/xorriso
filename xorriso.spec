@@ -21,7 +21,9 @@ filesystems.
 %setup -q
 
 %build
-%configure2_5x	--enable-libreadline
+CFLAGS="%{optflags} -O3" \
+%configure2_5x	--enable-libreadline \
+		--disable-debug
 %make
 
 %install
