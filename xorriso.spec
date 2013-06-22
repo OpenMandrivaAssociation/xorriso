@@ -1,12 +1,11 @@
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 Name:		xorriso
-Version:	1.2.4
+Version:	1.3.1
 Release:	1
 License:	GPLv3+
 Group:		Archiving/Cd burning
 URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
 Source0:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz
-Source1:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz.sig
 BuildRequires:	zlib-devel
 BuildRequires:	acl-devel
 BuildRequires:	bzip2-devel
