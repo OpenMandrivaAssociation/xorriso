@@ -6,10 +6,10 @@ License:	GPLv3+
 Group:		Archiving/Cd burning
 URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
 Source0:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz
-BuildRequires:	zlib-devel
 BuildRequires:	acl-devel
-BuildRequires:	bzip2-devel
 BuildRequires:	attr-devel
+BuildRequires:	bzip2-devel
+BuildRequires:	pkgconfig(zlib)
 
 %description
 xorriso copies file objects from POSIX compliant filesystems into Rock Ridge 
