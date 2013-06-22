@@ -10,6 +10,7 @@ BuildRequires:	acl-devel
 BuildRequires:	attr-devel
 BuildRequires:	bzip2-devel
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	readline-devel
 
 %description
 xorriso copies file objects from POSIX compliant filesystems into Rock Ridge 
@@ -20,7 +21,7 @@ filesystems.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x	--enable-libreadline
 %make
 
 %install
