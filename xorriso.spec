@@ -1,6 +1,6 @@
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 Name:		xorriso
-Version:	1.3.1
+Version:	1.3.7
 Release:	1
 License:	GPLv3+
 Group:		Archiving/Cd burning
@@ -37,7 +37,6 @@ CFLAGS="%{optflags} -O3" \
 %{_bindir}/xorriso
 %{_bindir}/xorriso-tcltk
 %{_bindir}/xorrisofs
-%{_bindir}/xorriso-tcltk
 %{_datadir}/info/xorr*.info*
 %{_mandir}/man1/xorr*.1*
 
