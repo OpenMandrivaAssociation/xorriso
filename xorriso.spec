@@ -1,17 +1,17 @@
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 Name:		xorriso
-Version:	1.3.0
-Release:	5
+Version:	1.3.1
+Release:	1
 License:	GPLv3+
 Group:		Archiving/Cd burning
 URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
 Source0:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz
-Source1:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz.sig
-BuildRequires:	zlib-devel
 BuildRequires:	acl-devel
-BuildRequires:	bzip2-devel
 BuildRequires:	attr-devel
+BuildRequires:	bzip2-devel
 BuildRequires:	pkgconfig(tcl)
+BuildRequires:	pkgconfig(zlib)
+BuildRequires:	readline-devel
 
 %description
 xorriso copies file objects from POSIX compliant filesystems into Rock Ridge 
@@ -22,7 +22,9 @@ filesystems.
 %setup -q
 
 %build
-%configure2_5x
+CFLAGS="%{optflags} -O3" \
+%configure2_5x	--enable-libreadline \
+		--disable-debug
 %make
 
 %install
@@ -35,6 +37,7 @@ filesystems.
 %{_bindir}/xorriso
 %{_bindir}/xorriso-tcltk
 %{_bindir}/xorrisofs
+%{_bindir}/xorriso-tcltk
 %{_datadir}/info/xorr*.info*
 %{_mandir}/man1/xorr*.1*
 
