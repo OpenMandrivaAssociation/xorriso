@@ -20,11 +20,10 @@ filesystems.
 
 %prep
 %setup -q
+touch NEWS
 
 %build
 %global optflags %{optflags} -Ofast
-%define	__cc	gcc
-%define	__cxx	g++
 %configure	--enable-libreadline \
 		--disable-debug
 
