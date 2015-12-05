@@ -1,7 +1,7 @@
 Summary:	ISO 9660 Rock Ridge Filesystem Manipulator
 Name:		xorriso
-Version:	1.4.0
-Release:	5
+Version:	1.4.2
+Release:	1
 License:	GPLv3+
 Group:		Archiving/Cd burning
 URL:		http://www.gnu.org/software/xorriso/xorriso_eng.html
@@ -23,9 +23,9 @@ filesystems.
 touch NEWS
 
 %build
-%global optflags %{optflags} -Ofast
-%configure	--enable-libreadline \
-		--disable-debug
+%configure \
+	--enable-libreadline \
+	--disable-debug
 
 %make
 
