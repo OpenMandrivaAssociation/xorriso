@@ -6,6 +6,11 @@ License:	GPLv3+
 Group:		Archiving/Cd burning
 URL:		https://www.gnu.org/software/xorriso/xorriso_eng.html
 Source0:	http://www.gnu.org/software/xorriso/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	acl-devel
 BuildRequires:	attr-devel
 BuildRequires:	bzip2-devel
